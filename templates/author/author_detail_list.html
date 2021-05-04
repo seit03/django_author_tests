@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors</title>
+</head>
+<body>
+<div>
+    <p>{{ object.name }}</p>
+    <p>{{ object.alive_or_not }}</p>
+</div>
+<div>
+    <ul>
+        {% for i in object.author_books.all %}
+        <li>
+        <p>{{ i.title }}</p>
+        <p>{{ i.description }}</p>
+        <p>{{ i.published_date }}</p>
+        <p>{{ i.genre }}</p>
+        <p>{{ i.rating }}</p>
+        </li>
+    </ul>
+        {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author</title>
+</head>
+<body>
+    <ul>
+        {% for i in object_list %}
+        <li>
+            <p><a href="/author/{{ i.pk }}/">{{ i.name }}</a></p>
+        <p>{{ i.alive_or_not }}</p>
+        </li>
+    </ul>
+        {% endfor %}
+</body>
+</html>
